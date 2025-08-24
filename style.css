@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary: #141414;
+  --secondary: #e50914;
+  --text: #fff;
+  --muted: #b3b3b3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--primary);
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.logo span {
+  color: var(--secondary);
+}
+
+.search-form input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #333;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem 2rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20, 20, 20, 0.9), transparent);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  max-height: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn.play {
+  background: var(--secondary);
+  color: var(--text);
+}
+
+.btn.info {
+  background: rgba(109, 109, 110, 0.7);
+  color: var(--text);
+}
+
+/* Movies Grid */
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: -4rem;
+}
+
+.movie {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.movie:hover {
+  transform: scale(1.08);
+}
+
+.movie img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 0.8rem;
+}
+
+.movie-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.movie-info p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  max-height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-info span {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.green {
+  background: #21d07a;
+}
+.orange {
+  background: #d2d531;
+}
+.red {
+  background: #db2360;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.btn-page {
+  padding: 0.6rem 1.2rem;
+  background: var(--secondary);
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-page:hover {
+  background: #f40612;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .movie img {
+    height: 250px;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <!-- Header with Search -->
+    <header class="navbar">
+      <div class="logo">Movie<span>App</span></div>
+      <form
+        id="form"
+        class="search-form">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search movies..." />
+      </form>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="hero"
+      id="hero">
+      <div class="hero-content">
+        <h1 id="hero-title">Featured Movie</h1>
+        <p id="hero-overview">Loading overview...</p>
+        <div class="hero-buttons">
+          <button class="btn play">▶ Play</button>
+          <button class="btn info">ℹ More Info</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Movies Grid -->
+    <main id="main"></main>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button
+        id="prev"
+        class="btn-page">
+        ⬅ Prev
+      </button>
+      <span id="page-number">1</span>
+      <button
+        id="next"
+        class="btn-page">
+        Next ➡
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
